@@ -108,10 +108,9 @@ function esPrimo() {
 
 
 let seleccion = 0
-seleccion = prompt("Indique la opción que desea \n 1 - Para calculadora \n 2 - Para ordenar una lista por pares e impares \n 3 - Para jugar un juego \n 4 - Para saber si un número es primo ")
+seleccion = prompt("Indique la opción que desea \n 1 - Para calculadora \n 2 - Para ordenar una lista por pares e impares \n 3 - Para jugar un juego \n 4 - Para saber si un número es primo \n 5 - Para salir")
 
-while(seleccion )
-
+while(seleccion!="5"){
 switch (seleccion) {
     case "1":
         caluladora()
@@ -125,7 +124,12 @@ switch (seleccion) {
     case "4":
         esPrimo()
         break;
+    case "5":
+        break;
     default:
         alert("Opción no válida, intente nuevamente eligiendo unicamente una de las 4 opciones posibles.")
         break;
+}
+seleccion=prompt("Indique la opción que desea \n 1 - Para calculadora \n 2 - Para ordenar una lista por pares e impares \n 3 - Para jugar un juego \n 4 - Para saber si un número es primo  \n 5 - Para salir")
+
 }
