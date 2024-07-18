@@ -1,27 +1,34 @@
 function caluladora() {
     let operacion = ""
     let resultado = 0
-    primerNumero = parseInt(prompt("Ingrese el primer número entero"))
-    segundoNumero = parseInt(prompt("Ingrese el segundo número entero"))
-    operacion = prompt("Qué operación desea hacer? \n El resultado lo verás en la consola... \n + - * /")
+    let primerNumero = parseFloat(prompt("Ingrese el primer número"))
+    let segundoNumero = parseFloat(prompt("Ingrese el segundo número"))
+    operacion = prompt("Qué operación desea hacer? \n  + - * /")
+
+    while (isNaN(primerNumero)) {
+        alert("Por favor ingresa un número válido.")
+        primerNumero = parseInt(prompt("Ingrese nuevamente el primer número:"));
+    }
+
+    while (isNaN(segundoNumero)) {
+        alert("Por favor ingresa un número válido.")
+        segundoNumero = parseInt(prompt("Ingrese nuevamente el primer número:"));
+    }
 
     switch (operacion) {
         case "+":
             resultado = primerNumero + segundoNumero
-            console.log(`El resultado de ${primerNumero} más ${segundoNumero} es ${resultado}`)
             alert(`El resultado de ${primerNumero} más ${segundoNumero} es ${resultado}`)
             break;
 
         case "-":
             resultado = primerNumero - segundoNumero
-            console.log(`El resultado de ${primerNumero} menos ${segundoNumero} es ${resultado}`)
             alert(`El resultado de ${primerNumero} menos ${segundoNumero} es ${resultado}`)
             break;
 
 
         case "*":
             resultado = primerNumero * segundoNumero
-            console.log(`El resultado de ${primerNumero} por ${segundoNumero} es ${resultado}`)
             alert(`El resultado de ${primerNumero} por ${segundoNumero} es ${resultado}`)
             break;
 
@@ -31,7 +38,6 @@ function caluladora() {
                 break;
             } else {
                 resultado = primerNumero / segundoNumero
-                console.log(`El resultado de ${primerNumero} dividido ${segundoNumero} es ${resultado}`)
                 alert(`El resultado de ${primerNumero} dividido ${segundoNumero} es ${resultado}`)
                 break;
             }
@@ -109,7 +115,6 @@ while(seleccion )
 switch (seleccion) {
     case "1":
         caluladora()
-        alert("Para ver el resultado, deberás hacerlo por consola...")
         break;
     case "2":
         parOimpar()
